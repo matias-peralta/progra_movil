@@ -1,0 +1,7 @@
+{
+  "name": "proyecto_auth_storage_003",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

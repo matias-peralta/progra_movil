@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="avatar">
+    <ion-avatar (click)="uploadAvatar()">
+      <img  *ngIf="profile?.imageUrl; else avatar_else;" [src]="profile.imageUrl" />
+      
+      <ng-template #avatar_else>
+        <div class="no-avatar">
+          <p>click me!!!</p>
+        </div>
+      </ng-template>
+    </ion-avatar>
+  </div>
+</ion-content>
