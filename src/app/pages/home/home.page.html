@@ -1,26 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()">
-        <ion-icon slot="icon-only" name="log-out"></ion-icon>
-      </ion-button>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="avatar">
-    <ion-avatar (click)="uploadAvatar()">
-      <img  *ngIf="profile?.imageUrl; else avatar_else;" [src]="profile.imageUrl" />
-      
-      <ng-template #avatar_else>
-        <div class="no-avatar">
-          <p>click me!!!</p>
-        </div>
-      </ng-template>
-    </ion-avatar>
-  </div>
+
+
+  <img class="img_logo" src="../assets/img/Logo_DuocUC.svg" alt="">
+  <ion-card class="card_1">
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label>Bienvenido</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      <h3>Usuario : Estudiante</h3>
+      <h3>Contraseña : ***  <ion-icon name="eye-outline"></ion-icon></h3>
+      <h3>Carrera: ing.Informatica</h3>
+      <br>
+      <h3>Email: Example@duocuc.cl</h3>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card class="card_2">
+      <ion-item>
+      <ion-icon name="book" slot="start"></ion-icon>
+      <ion-label>Programacion movil</ion-label>
+    </ion-item>
+  </ion-card>
+<br>
+<ion-card class="card_3">
+  <ion-item>
+  <ion-icon name="book" slot="start"></ion-icon>
+  <ion-label>Big data</ion-label>
+</ion-item>
+</ion-card>
+<br>
+<ion-card class="card_4">
+  <ion-item>
+  <ion-icon name="book" slot="start"></ion-icon>
+  <ion-label>Seguridad en sistemas</ion-label>
+</ion-item>
+</ion-card>
+<ion-button class="btn_cerrar_sesion" color="danger" (click)="go()" >Cerrar sesion</ion-button>
 </ion-content>

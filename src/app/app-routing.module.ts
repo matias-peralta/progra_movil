@@ -26,14 +26,26 @@ const routes: Routes = [
     loadChildren: () => import('./pages/conversor/conversor.module').then( m => m.ConversorPageModule),
     ...canActivate(redirectUnauthorizedToLogin),
   },
+ 
   {
-    path: 'welcome',
-    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
+  {
+    path: 'alumnos',
+    loadChildren: () => import('./pages/alumnos/alumnos.module').then( m => m.AlumnosPageModule)
+  },
+  {
+    path: 'e404',
+    loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
+  },
+
   {
     path:'**',
     redirectTo:'',
-  }
+  },
+ 
+
 ];
 
 @NgModule({

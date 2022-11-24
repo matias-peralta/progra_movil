@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversorPage implements OnInit {
 
+  monto: number=12000000.56;  
   constructor() { }
 
   ngOnInit() {

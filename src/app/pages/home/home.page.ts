@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
@@ -21,10 +21,17 @@ export class HomePage {
     private alertCtrl: AlertController,
     private loadingCtrl:LoadingController,
     private toastCtrl:ToastController
-  ) {
+  ) {}
+   
+  go() {
+    this.router.navigate(['/Login']);
+  }
+  
+  NgOnInit()
+  {
     this.loadProfile();
   }
-
+   
   async logout(){
     await this.authService.logout();
     this.router.navigateByUrl('/',{replaceUrl:true})

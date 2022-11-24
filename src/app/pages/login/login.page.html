@@ -5,17 +5,27 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="login()" [formGroup]="credentials">
-    <ion-item class="ion-margin-bottom">
-      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
-      <ion-note slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors">Formato email no válido</ion-note>
-    </ion-item>
-    <ion-item class="ion-margin-bottom">
-      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
-      <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">Debes ingresar al menos 6 caracteres. </ion-note>
-    </ion-item>
+  <img-thumbnail>
+    <img class="img_login" height="150 rem" width="150 rem" src="../../../assets/img/Logo_DuocUC.svg" alt="">
+  </img-thumbnail>
+  <br>
+  <ion-item class="text_imput">
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <br>
+  <ion-item class="password_imput">
+    <ion-label position="floating">Pasword</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
 
-    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
-    <ion-button expand="full" type="button" (click)="register()">Crear cuenta</ion-button>
-  </form>
-</ion-content>
+  <ion-button (click)="go()"  class="boton_inicio_session" id="click-trigger">Iniciar Sesion</ion-button>
+  <ion-popover trigger="click-trigger" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Credenciales correctas</ion-content>
+    </ng-template>
+  </ion-popover>
+
+</ion-content
+>
+

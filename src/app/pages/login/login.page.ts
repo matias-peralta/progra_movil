@@ -17,7 +17,11 @@ export class LoginPage implements OnInit {
     private loadingCtrl:LoadingController,
     private alertCtrl:AlertController,
     private router:Router
-  ) { }
+  ){ }
+
+  go(){
+    this.router.navigate(['/home']);
+  }
 
   credentials!: FormGroup;
 

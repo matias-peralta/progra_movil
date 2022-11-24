@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>conversor</ion-title>
+    <ion-title>Conversor</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/bienvenida"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <h1>{{monto | currency:'CLP':'symbol-narrow':'1.0-1'}}</h1>
 
 </ion-content>
