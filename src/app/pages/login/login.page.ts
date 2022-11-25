@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   ){ }
 
   go(){
-    this.router.navigate(['/home']);
+    this.router.navigateByUrl('/home');
   }
 
   credentials!: FormGroup;

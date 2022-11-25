@@ -19,7 +19,9 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
-    ...canActivate(redirectUnauthorizedToLogin),
+    //...canActivate(redirectUnauthorizedToLogin), 
+
+    //..agregar usuario a firebase por eso no pasa de la sesion )
   },  
   {
     path: 'conversor',
